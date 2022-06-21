@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         ViewModel = ViewModelProvider(this, MainViewModelModelFactory())[MainViewModel::class.java]
         checkfirst()
-        getListData()
         initRvView()
+        getListData()
     }
 
     private fun checkfirst() {
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 })
             } catch (e: NullPointerException) {
-
+                Log.e("錯誤",e.toString())
             }
         }
     }
